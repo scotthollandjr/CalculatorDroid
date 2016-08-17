@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.scout.calculator.R;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 
 import butterknife.Bind;
@@ -125,9 +126,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
-        Log.d("MATH!", "result: " + result);
-        displayString = result + "";
-        mEquationText.setText(displayString);
+        String resultString = result + "";
+        char last = resultString.charAt(resultString.length()-1);
+        char secLast = resultString.charAt(resultString.length() -2);
+        String lastTwo = secLast + "" + last;
+        if (lastTwo.equals(".0")) {
+            BigDecimal resultTwo = new BigDecimal(result).setScale(0, RoundingMode.DOWN);
+            displayString = resultTwo + "";
+            mEquationText.setText(displayString);
+        } else {
+            Log.d("MATH!", "result last two: " + secLast + last);
+            displayString = result + "";
+            mEquationText.setText(displayString);
+        }
         mathObject = "z";
         firstNum.setLength(0);
         secondNum.setLength(0);
