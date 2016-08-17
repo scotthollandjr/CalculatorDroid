@@ -37,6 +37,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        mButtonOne.setOnClickListener(this);
+        mButtonTwo.setOnClickListener(this);
+        mButtonThree.setOnClickListener(this);
+        mButtonFour.setOnClickListener(this);
+        mButtonFive.setOnClickListener(this);
+        mButtonSix.setOnClickListener(this);
+        mButtonSeven.setOnClickListener(this);
+        mButtonEight.setOnClickListener(this);
+        mButtonNine.setOnClickListener(this);
+        mButtonZero.setOnClickListener(this);
+        mButtonPeriod.setOnClickListener(this);
+        mButtonEquals.setOnClickListener(this);
+        mButtonAdd.setOnClickListener(this);
+        mButtonSub.setOnClickListener(this);
+        mButtonMult.setOnClickListener(this);
+        mButtonDivide.setOnClickListener(this);
+        mButtonModulo.setOnClickListener(this);
+        mButtonCase.setOnClickListener(this);
+        mButtonClear.setOnClickListener(this);
     }
 
     @Override
