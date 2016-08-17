@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.scout.calculator.R;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 import butterknife.Bind;
@@ -103,9 +104,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void processEquation() {
-        int result = 0;
-        int first = Integer.parseInt(firstNum.toString());
-        int second = Integer.parseInt(secondNum.toString());
+        float result = 0;
+        float first = Integer.parseInt(firstNum.toString());
+        float second = Integer.parseInt(secondNum.toString());
+
+//        Log.d("MATH!", "first: " + first);
+//        Log.d("MATH!", "second: " + second);
 
         if (mathObject.equals("add")) {
             result = first + second;
@@ -121,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
-        Log.d("MATH!", result + "");
+        Log.d("MATH!", "result: " + result);
         displayString = result + "";
         mEquationText.setText(displayString);
         mathObject = "z";
@@ -160,6 +164,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (view == mButtonZero) {
             gatherEquation("0");
+        }
+        if (view == mButtonPeriod) {
+            gatherEquation(".");
         }
         if (view == mButtonEquals) {
             processEquation();
