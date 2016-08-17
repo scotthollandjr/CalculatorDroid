@@ -3,8 +3,8 @@
 
     <item
         android:state_pressed="true"
-        android:drawable="@color/calcAccentHover"
-        android:color="@color/calcAccentHover"/>
+        android:drawable="@color/calcAccentClick"
+        android:color="@color/calcAccentClick"/>
     <item
         android:drawable="@color/calcAccent"
         android:color="@color/calcAccent"/>
