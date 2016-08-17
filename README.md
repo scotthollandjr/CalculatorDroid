@@ -2,6 +2,10 @@
 
 A quick, functioning Android calculator project.
 
+## Images
+
+![Main screen](https://s4.postimg.org/maux1qe9p/Calculator_Droid.png)
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
