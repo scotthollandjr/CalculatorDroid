@@ -5,11 +5,14 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="calcLight">#e7e7e7</color>
-    <color name="calcLightHover">#f2f2f2</color>
+    <color name="calcLightClick">#f2f2f2</color>
     <color name="calcDark">#c3c3c3</color>
-    <color name="calcDarkHover">#cccccc</color>
+    <color name="calcDarkClick">#cccccc</color>
     <color name="calcAccent">#8271ab</color>
-    <color name="calcAccentHover">#9c8fbd</color>
+    <color name="calcAccentClick">#9c8fbd</color>
     <color name="calcTextLight">#e7e7e7</color>
     <color name="calcTextDark">#000000</color>
+
+    <color name="test">#00ff00</color>
+
 </resources>
