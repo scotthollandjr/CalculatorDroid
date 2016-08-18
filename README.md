@@ -4,7 +4,7 @@ A quick, functioning Android calculator project.
 
 ## Images
 
-![Main screen](https://s4.postimg.org/maux1qe9p/Calculator_Droid.png | width=100)
+![Main screen](https://s4.postimg.org/maux1qe9p/Calculator_Droid.png width="200" height="400")
 
 ## Prerequisites
 
