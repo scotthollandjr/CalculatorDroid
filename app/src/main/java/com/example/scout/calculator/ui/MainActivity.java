@@ -37,10 +37,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Bind(R.id.buttonTwo) TextView mButtonTwo;
     @Bind(R.id.buttonZero) TextView mButtonZero;
     @Bind(R.id.equationText) TextView mEquationText;
+    @Bind(R.id.operationText) TextView mOperationText;
 
     private StringBuilder firstNum = new StringBuilder();
     private StringBuilder secondNum = new StringBuilder();
     private String displayString;
+    private String displayString2;
+    private String operationString;
     private String mathObject;
 
     @Override
@@ -69,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mButtonCase.setOnClickListener(this);
         mButtonClear.setOnClickListener(this);
         mEquationText.setOnClickListener(this);
+        mOperationText.setOnClickListener(this);
 
         mEquationText.setText("0");
         mathObject = "z";
@@ -86,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         firstNum.append(i);
 
         displayString = firstNum.toString();
+        displayString2 = firstNum.toString();
         mEquationText.setText(displayString);
     }
 
@@ -93,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         secondNum.append(i);
 
         displayString = secondNum.toString();
+        displayString2 = secondNum.toString();
         mEquationText.setText(displayString);
     }
 
@@ -139,9 +145,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             displayString = result + "";
             mEquationText.setText(displayString);
         }
+        operationString = "";
         mathObject = "z";
         firstNum.setLength(0);
         secondNum.setLength(0);
+        mOperationText.setText(operationString);
     }
 
     @Override
@@ -184,23 +192,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (view == mButtonAdd) {
             mathObject = "add";
-            displayString = "+";
-            mEquationText.setText(displayString);
+            operationString = "+";
+            mOperationText.setText(operationString + " ");
         }
         if (view == mButtonSub) {
             mathObject = "sub";
-            displayString = "-";
-            mEquationText.setText(displayString);
+            operationString = "-";
+            mOperationText.setText(operationString + " ");
         }
         if (view == mButtonMult) {
             mathObject = "mul";
-            displayString = "x";
-            mEquationText.setText(displayString);
+            operationString = "x";
+            mOperationText.setText(operationString + " ");
         }
         if (view == mButtonDivide) {
             mathObject = "div";
-            displayString = "÷";
-            mEquationText.setText(displayString);
+            operationString = "÷";
+            mOperationText.setText(operationString + " ");
         }
         if (view == mButtonClear) {
             clearStats();

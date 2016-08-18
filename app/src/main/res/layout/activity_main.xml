@@ -11,7 +11,8 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:gravity="end">
 
         <TextView
             android:layout_width="match_parent"
@@ -32,9 +33,13 @@
             android:layout_marginBottom="1dp"/>
 
         <TextView
+            android:id="@+id/operationText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="x"
+            android:gravity="end"
+            android:paddingRight="10dp"
+            android:paddingBottom="3dp"
+            android:paddingTop="2dp"
             android:textColor="@color/calcTextLight"/>
 
         <LinearLayout
