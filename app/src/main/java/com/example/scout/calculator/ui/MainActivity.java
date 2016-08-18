@@ -85,25 +85,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void buildFirstNum(String i) {
-        firstNum.append(i);
-
+        if (i.equals("-")) {
+            if (caseChecker(firstNum.toString())) {
+                firstNum.insert(0, "-");
+            } else {
+                firstNum.deleteCharAt(0);
+            }
+        } else {
+            firstNum.append(i);
+        }
         displayString = firstNum.toString();
         displayString2 = firstNum.toString();
         mEquationText.setText(displayString);
     }
 
     public void buildSecondNum(String i) {
-        secondNum.append(i);
-
+        if (i.equals("-")) {
+            if (caseChecker(secondNum.toString())) {
+                secondNum.insert(0, "-");
+            } else {
+                secondNum.deleteCharAt(0);
+            }
+        } else {
+            secondNum.append(i);
+        }
         displayString = secondNum.toString();
         displayString2 = secondNum.toString();
         mEquationText.setText(displayString);
+
+    }
+
+    public boolean caseChecker(String string) {
+        if (string.indexOf("-") == -1) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void clearStats() {
         mathObject = "z";
         firstNum.setLength(0);
         secondNum.setLength(0);
+        operationString = "";
+        mOperationText.setText(operationString);
         displayString = "";
         mEquationText.setText(displayString);
     }
@@ -182,10 +207,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mEquationText.setText(displayString);
         }
         operationString = "";
+        mOperationText.setText(operationString);
         mathObject = "z";
         firstNum.setLength(0);
         secondNum.setLength(0);
-        mOperationText.setText(operationString);
+    }
+
+    public void toggleCase() {
+        if (mathObject.equals("z")) {
+            buildFirstNum("-");
+        } else {
+            buildSecondNum("-");
+        }
     }
 
     @Override
@@ -250,7 +283,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             clearStats();
         }
         if (view == mButtonCase) {
-
+            toggleCase();
         }
     }
 }
