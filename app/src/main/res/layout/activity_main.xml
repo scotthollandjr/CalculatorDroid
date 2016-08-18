@@ -49,10 +49,10 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".50"
                 android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="AC"
+                android:text="CLEAR"
                 android:id="@+id/buttonClear"
                 android:background="@drawable/button_dark"
                 android:padding="28dp"
@@ -74,21 +74,6 @@
                 android:layout_marginBottom="1dp"
                 android:layout_marginRight="1dp"
                 android:textColor="@color/calcTextDark"  />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="%"
-                android:id="@+id/buttonModulo"
-                android:layout_gravity="right"
-                android:background="@drawable/button_dark"
-                android:padding="28dp"
-                android:layout_marginBottom="1dp"
-                android:layout_marginRight="1dp"
-                android:textColor="@color/calcTextDark" />
 
             <TextView
                 android:layout_width="0dp"
@@ -161,7 +146,7 @@
                 android:layout_weight=".25"
                 android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="x"
+                android:text="×"
                 android:id="@+id/buttonMult"
                 android:layout_gravity="right"
                 android:background="@drawable/button_accent"
