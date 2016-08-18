@@ -112,11 +112,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void processEquation() {
         float result = 0;
+        String firstString = firstNum.toString();
+        String secondString = firstNum.toString();
+
         float first = Integer.parseInt(firstNum.toString());
         float second = Integer.parseInt(secondNum.toString());
 
-//        Log.d("MATH!", "first: " + first);
-//        Log.d("MATH!", "second: " + second);
+// Possible method to work around float/int issue
+//        if (firstString.indexOf(".") != -1) {
+//            float first = Float.parseFloat(firstNum.toString());
+//            float second = Float.parseFloat(secondNum.toString());
+//
+//            if (mathObject.equals("add")) {
+//                result = first + second;
+//            } else if (mathObject.equals("sub")) {
+//                result = first - second;
+//            } else if (mathObject.equals("mul")) {
+//                result = first * second;
+//            } else if (mathObject.equals("div")) {
+//                result = first / second;
+//            } else if (mathObject.equals("z")){
+//                result = first;
+//            } else {
+//
+//            }
+//        } else {
+//            int first = Integer.parseInt(firstNum.toString());
+//            int second = Integer.parseInt(secondNum.toString());
+//
+//            if (mathObject.equals("add")) {
+//                result = first + second;
+//            } else if (mathObject.equals("sub")) {
+//                result = first - second;
+//            } else if (mathObject.equals("mul")) {
+//                result = first * second;
+//            } else if (mathObject.equals("div")) {
+//                result = first / second;
+//            } else if (mathObject.equals("z")){
+//                result = first;
+//            } else {
+//
+//            }
+//        }
 
         if (mathObject.equals("add")) {
             result = first + second;
