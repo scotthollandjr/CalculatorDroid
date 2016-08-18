@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Bind(R.id.buttonEquals) TextView mButtonEquals;
     @Bind(R.id.buttonFive) TextView mButtonFive;
     @Bind(R.id.buttonFour) TextView mButtonFour;
-    @Bind(R.id.buttonModulo) TextView mButtonModulo;
     @Bind(R.id.buttonMult) TextView mButtonMult;
     @Bind(R.id.buttonNine) TextView mButtonNine;
     @Bind(R.id.buttonOne) TextView mButtonOne;
@@ -68,7 +67,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mButtonSub.setOnClickListener(this);
         mButtonMult.setOnClickListener(this);
         mButtonDivide.setOnClickListener(this);
-        mButtonModulo.setOnClickListener(this);
         mButtonCase.setOnClickListener(this);
         mButtonClear.setOnClickListener(this);
         mEquationText.setOnClickListener(this);
@@ -151,6 +149,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            } else if (mathObject.equals("z")){
 //                result = first;
 //            } else {
+
 //
 //            }
 //        }
@@ -251,9 +250,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             clearStats();
         }
         if (view == mButtonCase) {
-
-        }
-        if (view == mButtonModulo) {
 
         }
     }
